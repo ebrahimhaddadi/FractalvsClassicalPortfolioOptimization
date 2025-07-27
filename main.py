@@ -30,7 +30,10 @@ def main():
     print_section("محاسبه Hurst Exponent")
     hursts = calculate_hurst_exponents(returns)
     for k, v in hursts.items():
-        print(f"{k}: {v:.4f}")
+        if v is not None:
+            print(f"{k}: {v:.4f}")
+        else:
+            print(f"{k}: محاسبه نشد")
 
     # بخش 4: بهینه‌سازی پرتفوی
     print_section("پرتفوی Markowitz")
