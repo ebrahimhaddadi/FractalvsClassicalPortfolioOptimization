@@ -1,0 +1,26 @@
+# محیط مجازی (venv)
+.venv/
+venv/
+ENV/
+env/
+
+# فایل‌های خروجی و نمودارها
+
+__pycache__/
+*.pyc
+
+# فایل‌های مربوط به IDE
+.idea/
+*.iml
+
+# فایل‌های موقتی Jupyter (اگر استفاده شد)
+.ipynb_checkpoints/
+
+# فایل‌های اجرایی تصادفی
+*.log
+*.tmp
+*.DS_Store
+
+# فایل‌های شخصی پیکربندی سیستم
+*.swp
+Thumbs.db
