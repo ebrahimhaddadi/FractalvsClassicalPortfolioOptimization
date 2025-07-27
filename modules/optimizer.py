@@ -29,6 +29,10 @@ def fractal_allocation(hursts_dict):
     """
     وزن‌دهی بر اساس نسبت Hurst هر دارایی
     """
-    total = sum(hursts_dict.values())
+    valid_values = [v for v in hursts_dict.values() if v is not None]
+    total = sum(valid_values)
+    if total == 0:
+        return pd.Series([1 / len(valid_values)] * len(valid_values), index=hursts_dict.keys())
+
     weights = {k: v / total for k, v in hursts_dict.items()}
     return pd.Series(weights)
